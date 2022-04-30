@@ -1,52 +1,83 @@
 body {
-    margin: 0;
-    background-color: rgb(208, 255, 239);
+  margin: 0;
+  background-image: url("./fundo.jpg");
+  background-size: cover;
+  background-position: right;
 }
 
 .main-game {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.partes {
+  box-shadow: -2px -2px 5px #000000;
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(1);
+}
 .genius {
-    display: grid;
-    grid-template-areas: 'verde vermelho'
-    'amarelo azul';
-    grid-gap: 10px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
-    border-radius: 100%;
-    width: 700px;
-    height: 700px;
+  display: grid;
+  grid-template-areas:
+    "verde vermelho"
+    "amarelo azul";
+  grid-gap: 10px;
+  border: 1rem solid #000000;
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 700px;
+  height: 700px;
 }
 
 .blue {
-    grid-area: azul;
-    background-color: blue;
-    border-bottom-right-radius: 100%;
+  grid-area: azul;
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+}
+.blue:hover {
+  background-color: rgba(0, 0, 256, 0.5);
 }
 
 .red {
-    grid-area: vermelho;
-    background-color: red;
-    border-top-right-radius: 100%;
+  grid-area: vermelho;
+  background-color: red;
+  border-top-right-radius: 100%;
+}
+.red:hover {
+  background-color: rgba(256, 0, 0, 0.5);
 }
 
 .yellow {
-    grid-area: amarelo;
-    background-color: yellow;
-    border-bottom-left-radius: 100%;
+  grid-area: amarelo;
+  background-color: yellow;
+  border-bottom-left-radius: 100%;
+}
+.yellow:hover {
+  background-color: rgba(255, 255, 51, 0.5);
 }
 
 .green {
-    grid-area: verde;
-    background-color: green;
-    border-top-left-radius: 100%;
+  grid-area: verde;
+  background-color: green;
+  border-top-left-radius: 100%;
+}
+.green:hover {
+  background-color: rgba(0, 256, 0, 0.5);
 }
 
 .selected {
-    opacity: 0.8;
+  opacity: 1;
+}
+.placar {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 5rem;
+  font-family: fantasy;
 }

@@ -1,6 +1,7 @@
 let order = [];
 let clickedOrder = [];
 let score = 0;
+const span = document.querySelector('span')
 
 const blue = document.querySelector('.blue');
 const red = document.querySelector('.red');
@@ -19,7 +20,7 @@ let shuffleOrder = () => {
 }
 
 let lightColor = (element, number) => {
-    number = number * 500;
+    number = number * 900;
     setTimeout(() => {
         element.classList.add('selected');
     }, number - 250);
@@ -63,23 +64,24 @@ let createColorElement = (color) => {
     }
 }
 
-let nextLevel = () => {
-    score++;
-    shuffleOrder();
-}
-
 let gameOver = () => {
-    alert(`Pontuação: ${score}!\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo`);
+    alert(`Você perdeu o jogo!
+Clique em OK para iniciar um novo jogo`);
     order = [];
     clickedOrder = [];
 
     playGame();
 }
 
-let playGame = () => {
-    alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
-    score = 0;
+let nextLevel = () => {
+    span.innerHTML = score;
+    score++;
+    shuffleOrder();
+}
 
+
+let playGame = () => {
+    score = 0;
     nextLevel();
 }
 
